@@ -54,4 +54,12 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Center point of the grid will be the closest gridpoint to the wind report location
 ![Mesoanalysis Grid Format](figs/Grid.png)
 
-  
+# Citation
+Any use of the data in this GitHub repository should cite this (in review):
+
+@unpublished{tirone_machine_2023,
+	address = {Bulletin of the American Meteorological Society},
+	title = {A machine learning approach to improve the usability of severe thunderstorm wind reports},
+	author = {Tirone, Elizabeth and Gallus, William A. and Pal, Subrata and Dutta, Somak and Maitra, Ranjan and Newman, Jennifer and Weber, Eric and Jirak, Israel},
+	year = {2023},
+}
