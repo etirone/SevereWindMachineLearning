@@ -48,7 +48,7 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
   | WNDG (numeric) | Wind damage parameter |
   | EDCP (numeric) | Evans Derecho Composite parameter |
 
-### Grid Numbering for Mesoanalysis data:
+### Grid Numbering for Mesoanalysis data
 * Schematic for mesoanalysis data
 * Star represents hypethetical location of a wind report
 * Center point of the grid will be the closest gridpoint to the wind report location
