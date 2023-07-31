@@ -13,9 +13,9 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
    * SPC mesoanalysis data are labeled as NAME_point with "NAME" corresponding to the variable name (see table) and "point" referencing the number on the grid (see diagram below)
    * Elevation and population are columns at the end of each row (labeled)
 
-  | Mesoanalysis Parameters | |
+### Mesoanalysis Parameters
+  | Name (unit) | Description |
   |-------|------------|
-  | Name | Description |
   | SBCP (J kg^{-1}) | Surface based CAPE |
   | SBCN (J kg^{-1}) | Surface based CIN | 
   | MUCP (J kg^{-1}) | Most unstable CAPE |
@@ -48,7 +48,10 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
   | WNDG (numeric) | Wind damage parameter |
   | EDCP (numeric) | Evans Derecho Composite parameter |
 
-  Grid Numbering for Mesoanalysis data:
+### Grid Numbering for Mesoanalysis data:
+* Schematic for mesoanalysis data
+* Star represents hypethetical location of a wind report
+* Center point of the grid will be the closest gridpoint to the wind report location
 ![Mesoanalysis Grid Format](figs/Grid.png)
 
   
