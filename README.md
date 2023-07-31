@@ -49,6 +49,6 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
   | EDCP (numeric) | Evans Derecho Composite parameter |
 
   
-
+![Mesoanalysis Grid Format](https://github.com/[etirone]/[SevereWindMachineLearning]/blob/[figs]/Grid.png?raw=true)
 
   
