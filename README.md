@@ -3,6 +3,11 @@ Machine learning approach to predict the probability that a severe wind report w
 
 * Working codes to quality control the data, train the machine learning models, and make predictions are in progress and will be published upon completion
 
+##### Table of Contents  
+[Data](#headers)    
+[Codes](#headers)
+<a name="headers"/>
+
 # Data
 Wind reports have speeds that were either measured (MG) or estimated (EG). The machine learning models were only trained on MG, but predictions can be made on estimated, however, due to the nature of the reports, skill metrics cannot be calculated on estimated reports since they have no ground truth measurements corresponding to them. 
 1. WindReports
@@ -56,6 +61,29 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 
 # Codes
 * Codes are being edited for broad use and will be available in time
+
+# Detailed Methodology
+#### Wind Reports
+* Wind reports are downloaded in bulk by year from https://www.ncdc.noaa.gov/stormevents/
+* Time information is changed from local time to UTC
+* If the difference from the start time to the end time is greater than 20 minutes, report is removed from the training set
+* Times are expressed using the start time
+* Reports with wind speeds less than 30 kts are removed from training set
+* Training was conducted using measured (MG) wind reports from 2007-2017 and the test set uses MG from 2018
+
+#### Text Processing
+* Event and episode narratives are merged since many reports are missing event narratives
+* 
+
+#### Mesoanalysis Data
+* 
+
+#### Elevation and Population
+
+#### Sub-Severe
+
+#### Machine Learning
+
 
 # Citation
 Any use of the data in this GitHub repository should cite this (in review):
