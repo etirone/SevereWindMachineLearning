@@ -4,8 +4,8 @@ Machine learning approach to predict the probability that a severe wind report w
 * Working codes to quality control the data, train the machine learning models, and make predictions are in progress and will be published upon completion
 
 ##### Table of Contents  
-[Data](#headers)    
-[Codes](#headers)
+[Data](https://github.com/etirone/SevereWindMachineLearning/edit/main/README.md#data)    
+[Codes](https://github.com/etirone/SevereWindMachineLearning/edit/main/README.md#data)
 <a name="headers"/>
 
 # Data
@@ -76,6 +76,9 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * 
 
 #### Mesoanalysis Data
+* 31 parameters from SPCs mesoanalysis dataset (see table above)
+* Data are collected on a 5 x 5 model grid with the center point representing the closest model grid point to the storm report location
+* Mesoanalysis data are hourly data so we chose the hour prior to the start of the report - for example a report falling at 11:27 UTC would be assigned the 11 UTC mesoanalysis data
 * 
 
 #### Elevation and Population
