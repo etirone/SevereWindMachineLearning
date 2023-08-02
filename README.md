@@ -86,8 +86,15 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Dimensionality was reduced for all mesoanalysis parameters except UWND, VWND, and SBCP. For all other parameters, we used only the minimum, maximum, and average value over the 25 points
 
 #### 4. Elevation and Population
+* Elevation in meters closest to storm report
+* Average population over nearest 2 x 2 km to storm reports collected from https://landscan.ornl.gov/about
 
 #### 5. Sub-Severe
+* Measurements from ASOS and AWOS were sampled within 32 km and 30 minutes of an estimated wind report for 2007-2018
+* Reflectiviy of at least 50 dBz had tobe sampled within the 32 km and 30 km of the measurement site
+* A random sample of these reports was used to populate the training set and testing set (2018)
+* All previous features were also collected for these reports
+* Due to their nature, these do not have any text value and therefore text were not processed for sub-severe measurements
 
 #### 6. Machine Learning
 
