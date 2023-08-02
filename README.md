@@ -4,9 +4,10 @@ Machine learning approach to predict the probability that a severe wind report w
 * Working codes to quality control the data, train the machine learning models, and make predictions are in progress and will be published upon completion
 
 ##### Table of Contents  
-[Data](#data)    
+[Data](#data)  
 [Codes](#codes)
-
+[Methodology](#detailed-methodology)
+[Citation](#citation)
 
 # Data
 Wind reports have speeds that were either measured (MG) or estimated (EG). The machine learning models were only trained on MG, but predictions can be made on estimated, however, due to the nature of the reports, skill metrics cannot be calculated on estimated reports since they have no ground truth measurements corresponding to them. 
