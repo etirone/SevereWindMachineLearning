@@ -105,7 +105,7 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * 
 
 # Citation
-Any use of the data in this GitHub repository should cite this (paper in review):
+Any use of the data in this GitHub repository should cite (paper in review):
 
 **Tirone, E., Gallus, W. A., Pal, S., Dutta, S., Maitra, R., Newman, J., Weber, E., and Jirak, I., (2023). A machine learning approach to improve the usability of severe thunderstorm wind reports. *Bull. Amer. Meteor. Soc.* (in review)**
 
