@@ -29,9 +29,9 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
   | LR75 (C km^{-1}) | Lapse rate from 700 - 500 mb | 
   | LR85 (C km^{-1}) | Lapse rate from 850 - 500 mb |
   | LPS4 (C km^{-1}) | Lapse rate from surface to 400 mb |
-  | RH80 (%) | Relative humidity at 800 mb |
-  | RH70 (%) | Relative humidity at 700 mb |
-  | 3KRH (%) | 3 km average relative humidity |
+  | *RH80 (%)* | Relative humidity at 800 mb |
+  | *RH70 (%)* | Relative humidity at 700 mb |
+  | *3KRH (%)* | 3 km average relative humidity |
   | SLCH (m) | Surface based LCL height |
   | RHLC (%) | Average relative humidity LCL to LFC |
   | DNCP (J kg^{-1}) | Downdraft CAPE |
@@ -46,9 +46,9 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
   | V6SV (kt) | Surface to 6 km V shear comonent |
   | U8SV (kt) | Surface to 8 km pressure weighted U component |
   | V8SV (kt) | Surface to 8 km pressure weighted V component |
-  | S6MG (kt) | Surface to 6 km shear magnitude |
-  | UEIL (kt) | U component at top of effective inflow layer |
-  | VEIL (kt) | V component at top of effective inflow layer |
+  | *S6MG (kt)* | Surface to 6 km shear magnitude |
+  | *UEIL (kt)* | U component at top of effective inflow layer |
+  | *VEIL (kt)* | V component at top of effective inflow layer |
   | QTRN (g kt kg^{-1}) | Max mixing ratio X storm relative inflow at MUPL |
   | XTRN (g kt kg^{-1}) | Max mixing ratio X wind speed at MUPL |
   | WNDG (numeric) | Wind damage parameter |
@@ -64,7 +64,7 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Codes are being edited for broad use and will be available in time
 
 # Detailed Methodology
-#### Wind Reports
+#### 1. Wind Reports
 * Wind reports are downloaded in bulk by year from https://www.ncdc.noaa.gov/stormevents/
 * Time information is changed from local time to UTC
 * If the difference from the start time to the end time is greater than 20 minutes, report is removed from the training set
@@ -72,21 +72,24 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Reports with wind speeds less than 30 kts are removed from training set
 * Training was conducted using measured (MG) wind reports from 2007-2017 and the test set uses MG from 2018
 
-#### Text Processing
+#### 2. Text Processing
 * Event and episode narratives are merged since many reports are missing event narratives
 * 
 
-#### Mesoanalysis Data
+#### 3. Mesoanalysis Data
 * 31 parameters from SPCs mesoanalysis dataset (see table above)
 * Data are collected on a 5 x 5 model grid with the center point representing the closest model grid point to the storm report location
 * Mesoanalysis data are hourly data so we chose the hour prior to the start of the report - for example a report falling at 11:27 UTC would be assigned the 11 UTC mesoanalysis data
-* 
+* Six parameters did not exist in early years of the training set (italicized in Table) - see citation for more information
+* In years with these missing, related parameters were substituted as follows (parentheses): S6MG (U6SV), 3KRH (RHLC), UEIL (U8SV), VEIL (V8SV), RH80 (RHLC), RH70 (RHLC)
+* -9999, 9999, and 999 values represent inability to calculate that field. To account for this, missing-indicator method was applied which replaced erroneous value with zero and added indicator variable
+* Dimensionality was reduced for all mesoanalysis parameters except UWND, VWND, and SBCP. For all other parameters, we used only the minimum, maximum, and average value over the 25 points
 
-#### Elevation and Population
+#### 4. Elevation and Population
 
-#### Sub-Severe
+#### 5. Sub-Severe
 
-#### Machine Learning
+#### 6. Machine Learning
 
 
 # Citation
