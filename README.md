@@ -97,7 +97,12 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Due to their nature, these do not have any text value and therefore text were not processed for sub-severe measurements
 
 #### 6. Machine Learning
-
+* A total of 6 models were trained and tested
+* 3 were considered to be "base" models
+* 3 were considered "ensemble" models - these were ensemble models constructed from the 3 base models
+* Base models - gradient boosted machine, support vector machine, artifical neural network
+* Ensemble models - stacked generalized linear model, stacked random forest, average ensemble
+* 
 
 # Citation
 Any use of the data in this GitHub repository should cite this (paper in review):
