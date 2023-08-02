@@ -5,7 +5,7 @@ Machine learning approach to predict the probability that a severe wind report w
 
 ##### Table of Contents  
 * [Data](#data)  
-* [Scripts](#codes)
+* [Scripts](#scripts)
 * [Methodology](#detailed-methodology)
 * [Citation](#citation)
 
