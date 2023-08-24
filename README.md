@@ -104,6 +104,7 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Ensemble models - stacked generalized linear model, stacked random forest, average ensemble
   
 ### Model Hyperparameters
+Model hyperparameters were chosen based on minimizing error from cross validation (CV). 6 fold CV with 36 repititions was chosen for this task. 
 
 #### Gradient Boosted Machine
 * 
