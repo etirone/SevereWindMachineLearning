@@ -64,7 +64,7 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Codes are being edited for broad use and will be available in time
 
 # Detailed Methodology
-#### 1. Wind Reports
+## 1. Wind Reports
 * Wind reports are downloaded in bulk by year from https://www.ncdc.noaa.gov/stormevents/
 * Time information is changed from local time to UTC
 * If the difference from the start time to the end time is greater than 20 minutes, report is removed from the training set
@@ -72,11 +72,11 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Reports with wind speeds less than 30 kts are removed from training set
 * Training was conducted using measured (MG) wind reports from 2007-2017 and the test set uses MG from 2018
 
-#### 2. Text Processing
+## 2. Text Processing
 * Event and episode narratives are merged since many reports are missing event narratives
 * 
 
-#### 3. Mesoanalysis Data
+## 3. Mesoanalysis Data
 * 31 parameters from SPCs mesoanalysis dataset (see table above)
 * Data are collected on a 5 x 5 model grid with the center point representing the closest model grid point to the storm report location
 * Mesoanalysis data are hourly data so we chose the hour prior to the start of the report - for example a report falling at 11:27 UTC would be assigned the 11 UTC mesoanalysis data
@@ -85,24 +85,37 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * -9999, 9999, and 999 values represent inability to calculate that field. To account for this, missing-indicator method was applied which replaced erroneous value with zero and added indicator variable
 * Dimensionality was reduced for all mesoanalysis parameters except UWND, VWND, and SBCP. For all other parameters, we used only the minimum, maximum, and average value over the 25 points
 
-#### 4. Elevation and Population
+## 4. Elevation and Population
 * Elevation in meters closest to storm report
 * Average population over nearest 2 x 2 km to storm reports collected from https://landscan.ornl.gov/about
 
-#### 5. Sub-Severe
+## 5. Sub-Severe
 * Measurements from ASOS and AWOS were sampled within 32 km and 30 minutes of an estimated wind report for 2007-2018
 * Reflectiviy of at least 50 dBz had tobe sampled within the 32 km and 30 km of the measurement site
 * A random sample of these reports was used to populate the training set and testing set (2018)
 * All previous features were also collected for these reports
 * Due to their nature, these do not have any text value and therefore text were not processed for sub-severe measurements
 
-#### 6. Machine Learning
+## 6. Machine Learning
 * A total of 6 models were trained and tested
 * 3 were considered to be "base" models
 * 3 were considered "ensemble" models - these were ensemble models constructed from the 3 base models
 * Base models - gradient boosted machine, support vector machine, artifical neural network
 * Ensemble models - stacked generalized linear model, stacked random forest, average ensemble
-* 
+### Model Hyperparameters
+
+#### Gradient Boosted Machine
+
+#### Support Vector Machine
+
+#### Artificial Neural Network
+
+#### Stacked Generalized Linear Model
+
+#### Stacked Random Forest
+
+#### Average Ensemble
+
 
 # Citation
 Any use of the data in this GitHub repository should cite (paper in review):
