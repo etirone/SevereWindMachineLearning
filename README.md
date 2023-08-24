@@ -9,6 +9,8 @@ Machine learning approach to predict the probability that a severe wind report w
 * [Methodology](#detailed-methodology)
 * [Citation](#citation)
 
+* ![ML Schematic](figs/ML_schematic.png)
+
 # Data
 Wind reports have speeds that were either measured (MG) or estimated (EG). The machine learning models were only trained on MG, but predictions can be made on estimated, however, due to the nature of the reports, skill metrics cannot be calculated on estimated reports since they have no ground truth measurements corresponding to them. 
 1. WindReports
