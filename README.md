@@ -3,7 +3,7 @@ Machine learning approach to predict the probability that a severe wind report w
 
 * Working codes to quality control the data, train the machine learning models, and make predictions are in progress and will be published upon completion
 
-##### Table of Contents  
+# Table of Contents  
 * [Data](#data)  
 * [Scripts](#scripts)
 * [Methodology](#detailed-methodology)
