@@ -102,19 +102,26 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * 3 were considered "ensemble" models - these were ensemble models constructed from the 3 base models
 * Base models - gradient boosted machine, support vector machine, artifical neural network
 * Ensemble models - stacked generalized linear model, stacked random forest, average ensemble
+  
 ### Model Hyperparameters
 
 #### Gradient Boosted Machine
+* 
 
 #### Support Vector Machine
+* 
 
 #### Artificial Neural Network
+* 
 
 #### Stacked Generalized Linear Model
+* 
 
 #### Stacked Random Forest
+* 
 
 #### Average Ensemble
+* 
 
 
 # Citation
