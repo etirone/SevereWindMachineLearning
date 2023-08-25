@@ -3,3 +3,4 @@
 * Time is listed in UTC
 * Elevation is in meters
 * Data are separated by year and type of report (MG/EG)
+* Wind speed is in knots
