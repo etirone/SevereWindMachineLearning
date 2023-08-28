@@ -76,7 +76,8 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 
 ## 2. Text Processing
 * Event and episode narratives are merged since many reports are missing event narratives
-* 
+* Correlated topic model used to represent text in the ML models
+* A total of 30 topics were chosen ad hoc (as opposed to fitting a model tooptimize the number of topics)
 
 ## 3. Mesoanalysis Data
 * 31 parameters from SPCs mesoanalysis dataset (see table above)
