@@ -105,26 +105,49 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Base models - gradient boosted machine, support vector machine, artifical neural network
 * Ensemble models - stacked generalized linear model, stacked random forest, average ensemble
   
-### Model Hyperparameters
+### Model Hyperparameters Tested
 Model hyperparameters were chosen based on minimizing error from cross validation (CV). 6 fold CV with 36 repititions was chosen for this task. 
 
 #### Gradient Boosted Machine
-* 
+* Number of treees: 50, 100, 150, ..., 450, 500
+* Interaction depth: 1, 2, 3, 4
+* Shrinkage: 0.1
+* Number of minimum observation in a node: 10
 
 #### Support Vector Machine
-* 
+* model automatically selectes sigma parameter
 
 #### Artificial Neural Network
-* 
+* Layer 1: 60, 80, 100, 120, 150
+* Layer 2: 20, 30, 40
+* Layer 3: 0, 5, 10, 15
+* Dropout rates: 0, 0.15, 0.35, 0.7
+* Learning rate: 2e-06, 0.001
+* Optimizer parameter beta1: 0.9
+* Optimizer parameter beta2: 0.9999
 
-#### Stacked Generalized Linear Model
-* 
+### Best Hyperparameters with Subsevere
+These were the best hyperparameters with subsevere reports in the training set
 
-#### Stacked Random Forest
-* 
+#### GBM
+* Number of trees: 250
+* Interaction depth: 4
+* Shrinkage: 0.1
+* Number of minimum observation per node: 10
 
-#### Average Ensemble
-* 
+#### SVM:
+* Sigma: 0.004011061
+
+#### Artificial Neural Network
+* Layer 1: 60
+* Layer 2: 15,
+* Layer 3: 5
+* Dropout rate: 0
+* beta1: 0.9
+* beta2: 0.9999
+* Learning rate: 0.001
+* Activation function: relu
+
 
 
 # Citation
