@@ -72,7 +72,13 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * If the difference from the start time to the end time is greater than 20 minutes, report is removed from the training set
 * Times are expressed using the start time
 * Reports with wind speeds less than 30 kts are removed from training set
-* Training was conducted using measured (MG) wind reports from 2007-2017 and the test set uses MG from 2018
+* Training was conducted using measured (MG) wind reports from 2007-2017 and the test set uses MG from 2018\
+
+#### Time
+Two approaches were taken to account for time:
+* The first separates year, month, day, hour, and minutes a separate variables
+* The second applies a Fourier transform (as the month variable is periodic, we can take the value and take sin(2 pi * month/12), cos(2 pi * month/12), sin(2 pi * 2* month/12), cos(2 pi * 2* month/12), ... (we have taken up to total four such variables) as new transformed variables)
+
 
 ## 2. Text Processing
 * Event and episode narratives are merged since many reports are missing event narratives
