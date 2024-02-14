@@ -158,7 +158,7 @@ These were the best hyperparameters with subsevere reports in the training set
 
 
 # Citation
-Any use of the data in this GitHub repository should cite (paper in review):
+Any use of the data in this GitHub repository should cite:
 
 **Tirone, E., Pal, S., Gallus, W. A.,  Dutta, S., Maitra, R., Newman, J., Weber, E., and Jirak, I., (2024). A machine learning approach to improve the usability of severe thunderstorm wind reports. *Bull. Amer. Meteor. Soc.* (accepted)**
 
