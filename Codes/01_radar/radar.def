@@ -1,0 +1,12 @@
+bootstrap: docker
+from: ghcr.io/mamba-org/micromamba:latest
+
+%files
+
+environment.yml /opt/environment.yml
+
+
+%post
+micromamba create -f /opt/environment.yml
+/opt/conda/envs/radar-env/bin/python3 -m pip install nexradaws
+echo 'export PATH=/opt/conda/envs/radar-env/bin:$PATH' >> $APPTAINER_ENVIRONMENT

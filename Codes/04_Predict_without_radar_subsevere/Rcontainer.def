@@ -1,0 +1,17 @@
+Bootstrap: docker
+From: r-base:latest
+
+%post
+    # Update and install system dependencies (if any)
+    apt-get update && apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
+
+    # Install R packages
+    R -e "install.packages(c('topicmodels', 'tidytext', 'tidyverse', 'mxnet', 'caret', 'caretEnsemble', 'pROC', 'plotROC'), repos='https://cloud.r-project.org/')"
+
+    # You might need to adjust the library path or installation method depending on your specific requirements
+
+%environment
+    export PATH="/usr/local/lib/R/bin:$PATH"
+
+%runscript
+    exec R "$@"

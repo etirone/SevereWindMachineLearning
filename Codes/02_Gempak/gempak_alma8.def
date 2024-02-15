@@ -1,0 +1,68 @@
+Bootstrap: docker
+From: almalinux/8-base
+
+%environment
+    export NAWIPS=/GEMPAK7
+    export NA_OS=linux64
+ #   export PATH=$PATH:/GEMPAK7/os/linux64/bin/
+ #   export GEMEXE=/GEMPAK7/os/linux64/bin/
+    . /GEMPAK7/Gemenviron.profile
+
+%files
+Gemenviron.profile GEMPAK7/Gemenviron.profile
+
+
+%post
+
+
+if [ -f /home/vagrant ]
+then
+    mkdir -p /home/vagrant
+fi
+if [ -d /vagrant ]
+then
+    mkdir -p /vagrant
+fi
+
+    dnf install gcc gcc-c++ gcc-gfortran libX11 libX11-devel libXt-devel libXext libXp libXp-devel libXft-devel libXtst-devel xorg-x11-xbitmaps flex byacc *fonts-IS
+O8859-* wget -y
+    dnf install make automake kernel-devel diffutils motif motif-devel libtool -y
+    dnf install vim nano -y
+
+    # Install Python, pip and required Python libraries
+    dnf install python3 python3-pip -y
+    pip3 install numpy pandas
+
+    # install conda
+#    mkdir ~/Downloads
+
+    #download conda install
+#    wget -P ~/Downloads https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
+#    cd ~/Downloads
+
+    # Download GEMPAK source code
+    cd /
+    wget -O gempak.tar.gz https://github.com/Unidata/gempak/archive/refs/tags/7.15.1.tar.gz
+
+    # Extract source code
+    tar -xvzf gempak.tar.gz
+
+    # move gempak
+    mv gempak-7.15.1/* /GEMPAK7/
+    find GEMPAK7 | grep Gemenviron
+
+    # Edit GEMPAK7/Gemenviron.profile to set $NAWIPS to the new GEMPAK7 directory
+    echo "export NAWIPS=/GEMPAK7" >> GEMPAK7/Gemenviron.profile
+    echo "export PATH=$PATH:/GEMPAK7/os/linux64/bin/" >> GEMPAK7/Gemenviron.profile
+    echo "export GEMEXE=/GEMPAK7/os/linux64/bin/" >> GEMPAK7/Gemenviron.profile
+    # Create a symbolic link NAWIPS in your home directory
+    ln -s /GEMPAK7 /NAWIPS
+
+    # Build GEMPAK
+ #   cd GEMPAK7
+    ls
+    pwd
+    . /GEMPAK7/Gemenviron.profile
+    cd /GEMPAK7
+    ls
+    make everything
