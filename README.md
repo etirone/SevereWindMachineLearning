@@ -62,8 +62,6 @@ Wind reports have speeds that were either measured (MG) or estimated (EG). The m
 * Center point of the grid will be the closest gridpoint to the wind report location
 ![Mesoanalysis Grid Format](figs/Grid.png)
 
-# Scripts
-* Codes are being edited for broad use and will be available in time
 
 # Detailed Methodology
 ## 1. Wind Reports
